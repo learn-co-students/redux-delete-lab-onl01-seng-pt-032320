@@ -8,14 +8,12 @@ export default function manageBand(state = {
 
     const band = {
       id: uuid(),
-      name: action.payload.name 
+      name: action.payload
     }
-
-      // return { ...state, bands: [...state.bands, action.name] }
     return {bands: state.bands.concat(band) };
 
     case 'DELETE_BAND':
-      return {bands: state.bands.filter(band => band.id !== action.payload.id )}
+      return {bands: state.bands.filter(band => band.id !== action.payload)}
 
     default:
       return state;

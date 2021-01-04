@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Band extends Component {
 
   handleOnClick = () => {
-    this.props.deleteBand(this.props.payload.id)
+    this.props.deleteBand(this.props.key)
   }
 
   render() {

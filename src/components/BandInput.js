@@ -2,22 +2,16 @@ import React, { Component } from 'react';
 
 class BandInput extends Component {
 
-  state = {
-    bandName: ''
-  }
+  state = { bandName: '' }
 
   handleOnChange(event) {
-    this.setState({
-      bandName: event.target.value,
-    });
+    this.setState({ bandName: event.target.value, });
   }
 
   handleOnSubmit(event) {
     event.preventDefault();
     this.props.addBand(this.state.bandName);
-    this.setState({
-      bandName: '',
-    });
+    this.setState({ bandName: '',});
   }
 
   render() {
